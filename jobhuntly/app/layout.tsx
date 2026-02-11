@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { Epilogue, Outfit } from "next/font/google";
+import { Epilogue} from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 
 const epilogue = Epilogue({
@@ -9,10 +10,15 @@ const epilogue = Epilogue({
 });
 
 
-const monument = Outfit({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  variable: "--font-monument",
+const clashDisplay = localFont({
+  src: [
+    {
+      path: './fonts/ClashDisplay-Variable.woff2', 
+      weight: '700',
+      style: 'normal',
+    },
+  ],
+  variable: '--font-clash',
 });
 
 export const metadata: Metadata = {
@@ -34,29 +40,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <head>
-        {/* Loading Epilogue and Outfit fonts via Google Fonts CDN to avoid import errors */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link 
-          href="https://fonts.googleapis.com/css2?family=Epilogue:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap" 
-          rel="stylesheet" 
-        />
-        <style dangerouslySetInnerHTML={{ __html: `
-          :root {
-            --font-epilogue: 'Epilogue', sans-serif;
-            --font-monument: 'Outfit', sans-serif;
-          }
-          body {
-            font-family: var(--font-epilogue);
-          }
-          h1, h2, h3, .font-heading {
-            font-family: var(--font-monument);
-          }
-        `}} />
-      </head>
-      <body className="antialiased">
+    <html lang="en" className={`${epilogue.variable} ${clashDisplay.variable}`}>
+      <body className="font-body antialiased">
         {children}
       </body>
     </html>

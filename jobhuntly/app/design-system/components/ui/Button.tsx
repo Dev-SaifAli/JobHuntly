@@ -7,10 +7,6 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   icon?: React.ReactNode;
 }
 
-/**
- * ATOM: Button Component
- * Design System ke hisaab se variants aur sizes handle karta hai.
- */
 export default function Button({ 
   children, 
   variant = "primary", 

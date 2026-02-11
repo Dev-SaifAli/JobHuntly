@@ -1,13 +1,5 @@
 import React from "react";
 
-/**
- * LOGO ICON COMPONENT
- * Yeh component aapke Figma SVG ko ek standard "Icon" pattern mein export karta hai.
- * Usage: 
- * import Logo from "@/design-system/components/ui/Logo";
- * <Logo size={40} />
- */
-
 interface IconProps extends React.SVGProps<SVGSVGElement> {
   size?: number;
   color?: string;

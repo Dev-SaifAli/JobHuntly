@@ -20,27 +20,14 @@
   --color-neutral-40: #A8ADB7;
   --color-neutral-20: #E4E5E7;
   --color-neutral-10: #F9FAFC;
+  --color-neutral-0: #FFFFFF;
 
   /* Fonts */
-  --font-heading: var(--font-monument);
+  --font-heading: var(--font-clash);
   --font-body: var(--font-epilogue);
-  
-  /* Font Sizes */
-  --font-size-h1: 72px;
-  --font-size-h2: 48px;
-  --font-size-body-xl: 30px;
-  --font-size-body-lg: 18px;
-  --font-size-body-nm: 16px;
-  
-  /* Font Weights */
-  --font-weight-heading: 400;
-  --font-weight-body-regular: 400;
-  --font-weight-body-medium: 500;
-  --font-weight-body-semibold: 600;
-  --font-weight-btn: 700;
 }
 
-/* Theme Variables - Light (default) */
+/* Light Mode (Default) */
 :root {
   --bg-main: #FFFFFF;
   --text-main: #25324B;
@@ -49,7 +36,7 @@
   --search-border: #E4E5E7;
 }
 
-/* Theme Variables - Dark */
+/* Dark Mode */
 .dark {
   --bg-main: #202430;
   --text-main: #FFFFFF;
@@ -58,51 +45,20 @@
   --search-border: transparent;
 }
 
-/* Base Styles */
 body {
   background-color: var(--bg-main);
   color: var(--text-main);
   font-family: var(--font-body), sans-serif;
   transition: background-color 0.3s, color 0.3s;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
-/* Custom Utility Classes */
 @layer utilities {
-  .accent-squiggle {
-    background-image: url("data:image/svg+xml,%3Csvg width='455' height='14' viewBox='0 0 455 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 12C50.5 5.5 151.5 2 227.5 2C303.5 2 404.5 5.5 453 12' stroke='%2326A4FF' stroke-width='6' stroke-linecap='round'/%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-position: bottom left;
-    background-size: 100% 12px;
-    padding-bottom: 12px;
-  }
-
-  .font-heading {
-    font-family: var(--font-heading), sans-serif;
-  }
-
-  .font-body {
-    font-family: var(--font-body), sans-serif;
-  }
-
-  .bg-main {
-    background-color: var(--bg-main);
-  }
-
-  .text-main {
-    color: var(--text-main);
-  }
-
-  .text-nav {
-    color: var(--nav-text);
-  }
-
-  .bg-search {
-    background-color: var(--search-bg);
-  }
-
-  .border-search {
-    border-color: var(--search-border);
-  }
+  .bg-main { background-color: var(--bg-main); }
+  .text-main { color: var(--text-main); }
+  .text-nav { color: var(--nav-text); }
+  .bg-search { background-color: var(--search-bg); }
+  .border-search { border-color: var(--search-border); }
+  .font-heading { font-family: var(--font-heading), 'Times New Roman', Times, serif; }
+  .font-body { font-family: var(--font-body), sans-serif; }
 }
