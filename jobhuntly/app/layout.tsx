@@ -16,7 +16,7 @@ const monument = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "JobHuntly - Great platform for the job seekers",
+  title: "JobHuntly - Great platform for the job seeker",
   description: "Job Hunting Website",
   icons: {
     // Browser looks for this in the 'public' folder
