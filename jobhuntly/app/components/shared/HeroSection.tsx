@@ -23,7 +23,8 @@ export default function HeroSection() {
   viewBox="0 0 455 40"
   fill="none"
   xmlns="http://www.w3.org/2000/svg"
-  className="absolute -bottom-4 left-0 w-full h-40px"
+  className="absolute -bottom-4 left-0 w-full h-auto" 
+  preserveAspectRatio="xMidYMid meet"
   aria-hidden="true"
 >
   <path
