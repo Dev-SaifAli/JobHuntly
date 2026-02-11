@@ -12,18 +12,34 @@ export default function HeroSection() {
           <Navbar />
         </header>
 
-        <main className="mx-auto max-w-7xl px-4 pb-16 pt-10 sm:px-6 md:pt-16 lg:px-24 lg:pb-20">
-          <div className="max-w-4xl space-y-8 md:space-y-10">
-            <h1 className="font-heading mb-6 text-[2.35rem] leading-[1.05] tracking-normal text-[#202430] transition-colors duration-300 sm:text-5xl md:mb-8 md:text-[64px] lg:text-[72px] dark:text-white">
-              Discover <br />
-              more than <br />
+        <main className="mx-auto max-w-7xl overflow-x-hidden px-4 pb-14 pt-8 sm:px-6 sm:pb-16 sm:pt-10 md:pt-14 lg:px-24 lg:pb-20">
+          <div className="max-w-4xl space-y-6 sm:space-y-8 md:space-y-10">
+            <h1 className="font-heading mb-4 text-[2rem] leading-[1.05] tracking-normal text-[#202430] transition-colors duration-300 sm:mb-6 sm:text-5xl md:mb-8 md:text-[64px] lg:text-[72px] dark:text-white">
+              <span className="sm:block">Discover</span>{" "}
+              <span className="sm:block">more than</span>{" "}
               <span className="relative inline-block text-[#26A4FF]">
                 5000+ Jobs
-                <span className="absolute -bottom-2 left-0 h-2 w-full rounded-full bg-[#26A4FF]/30 sm:-bottom-3" />
+                <svg
+                  width="455"
+                  height="40"
+                  viewBox="0 0 455 40"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="absolute -bottom-4 left-0 h-4 w-full max-w-[455px]"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M6 30C84 12 157 6 228 6C299 6 372 12 449 30"
+                    stroke="#26A4FF"
+                    strokeWidth="8"
+                    strokeLinecap="round"
+                    opacity="0.35"
+                  />
+                </svg>
               </span>
             </h1>
 
-            <p className="max-w-xl font-body text-base leading-relaxed text-slate-500 transition-colors duration-300 sm:text-lg md:text-xl dark:text-slate-400">
+            <p className="max-w-xl font-body text-sm leading-relaxed text-slate-500 transition-colors duration-300 sm:text-base md:text-lg dark:text-slate-400">
               Great platform for the job seeker that searching for new career heights and
               passionate about startups.
             </p>
