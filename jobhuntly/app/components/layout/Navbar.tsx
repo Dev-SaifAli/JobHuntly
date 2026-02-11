@@ -15,12 +15,12 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="relative z-50 w-full border-b border-neutral-200 bg-[#F8F8FD] px-4 py-4 transition-colors sm:px-6 lg:px-10 xl:px-24 dark:border-zinc-800 dark:bg-[#202430]">
+    <nav className="relative z-50 w-full border-b border-neutral-200 bg-[#F8F8FD] px-3 py-3 transition-colors sm:px-6 sm:py-4 lg:px-10 xl:px-24 dark:border-zinc-800 dark:bg-[#202430]">
       <div className="mx-auto flex w-full max-w-7xl items-center justify-between gap-4">
-        <div className="flex min-w-0 items-center gap-6 lg:gap-10">
+        <div className="flex min-w-0 items-center gap-3 sm:gap-4 lg:gap-10">
           <div className="flex shrink-0 items-center gap-2">
             <Logo size={28} />
-            <span className="font-sans text-lg font-bold tracking-tight text-zinc-900 sm:text-xl dark:text-white">
+            <span className="font-sans text-base font-bold tracking-tight text-zinc-900 sm:text-lg md:text-xl dark:text-white">
               JobHuntly
             </span>
           </div>
@@ -62,7 +62,7 @@ export default function Navbar() {
         </div>
 
         <button
-          className="p-2 text-zinc-900 lg:hidden dark:text-white"
+          className="rounded-sm p-2 text-zinc-900 lg:hidden dark:text-white"
           onClick={() => setIsOpen((prev) => !prev)}
           aria-label="Toggle navigation menu"
         >
