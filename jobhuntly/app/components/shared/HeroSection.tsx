@@ -17,14 +17,14 @@ export default function HeroSection() {
             <h1 className="font-heading mb-4 text-[2rem] leading-[1.05] tracking-normal text-[#202430] transition-colors duration-300 sm:mb-6 sm:text-5xl md:mb-8 md:text-[64px] lg:text-[72px] dark:text-white">
               <span className="sm:block">Discover</span>{" "}
               <span className="sm:block">more than</span>{" "}
-              <span className="relative inline-block text-[#26A4FF]">
+              <span className="relative inline-block text-accent-blue">
                 5000+ Jobs
                <svg
   viewBox="0 0 455 40"
   fill="none"
   xmlns="http://www.w3.org/2000/svg"
-  className="absolute -bottom-4 left-0 w-full h-auto" 
-  preserveAspectRatio="xMidYMid meet"
+  className="absolute left-0 top-[90%] w-full h-[0.6em]" 
+  preserveAspectRatio="none"
   aria-hidden="true"
 >
   <path
