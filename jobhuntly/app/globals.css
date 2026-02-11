@@ -1,26 +1,64 @@
 @import "tailwindcss";
 
+@theme {
+  /* Brand Colors */
+  --color-brand-primary: #4640DE;
+  --color-brand-secondary: #CCCCF5;
+  --color-brand-tertiary: #E7F6FD;
+  
+  /* Accents */
+  --color-accent-yellow: #FFB836;
+  --color-accent-green: #56CDAD;
+  --color-accent-red: #FF6550;
+  --color-accent-blue: #26A4FF;
+  --color-accent-purple: #7B61FF;
+
+  /* Neutrals */
+  --color-neutral-100: #25324B;
+  --color-neutral-80: #515B6F;
+  --color-neutral-60: #7C8493;
+  --color-neutral-40: #A8ADB7;
+  --color-neutral-20: #E4E5E7;
+  --color-neutral-10: #F9FAFC;
+  --color-neutral-0: #FFFFFF;
+
+  /* Fonts */
+  --font-heading: var(--font-clash);
+  --font-body: var(--font-epilogue);
+}
+
+/* Light Mode (Default) */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg-main: #FFFFFF;
+  --text-main: #25324B;
+  --nav-text: #515B6F;
+  --search-bg: #FFFFFF;
+  --search-border: #E4E5E7;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Dark Mode */
+.dark {
+  --bg-main: #202430;
+  --text-main: #FFFFFF;
+  --nav-text: rgba(255, 255, 255, 0.8);
+  --search-bg: #FFFFFF;
+  --search-border: transparent;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  font-family: var(--font-body), sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+  -webkit-font-smoothing: antialiased;
+}
+
+@layer utilities {
+  .bg-main { background-color: var(--bg-main); }
+  .text-main { color: var(--text-main); }
+  .text-nav { color: var(--nav-text); }
+  .bg-search { background-color: var(--search-bg); }
+  .border-search { border-color: var(--search-border); }
+  .font-heading { font-family: var(--font-heading), 'Times New Roman', Times, serif; }
+  .font-body { font-family: var(--font-body), sans-serif; }
 }
