@@ -2,8 +2,8 @@
 
 import React, { useState } from "react";
 import { Menu, X } from "lucide-react";
-import Button from "../../design-system/components/ui/Button";
-import Logo from "../../design-system/components/ui/Logo";
+import Button from "../ui/Button";
+import Logo from "@/components/ui/Logo" 
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);

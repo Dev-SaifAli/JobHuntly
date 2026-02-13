@@ -1,0 +1,43 @@
+- .gitignore
+- app
+  - company
+  - fonts
+    - ClashDisplay-Variable.woff2
+  - globals.css
+  - jobs
+  - layout.tsx
+  - page.tsx
+- components
+  - layout
+    - Footer.tsx
+    - Header.tsx
+    - Navbar.tsx
+  - shared
+    - HeroSection.tsx
+    - SearchBar.tsx
+  - ui
+    - Button.tsx
+    - Input.tsx
+    - Logo.tsx
+    - ThemeToggle.tsx
+- eslint.config.mjs
+- lib
+  - tokens
+    - colors.ts
+    - spacing.ts
+    - typography.ts
+- next-env.d.ts
+- next.config.ts
+- package-lock.json
+- package.json
+- postcss.config.mjs
+- project_structure.text
+- public
+  - favicon.svg
+  - file.svg
+  - globe.svg
+  - next.svg
+  - vercel.svg
+  - window.svg
+- README.md
+- tsconfig.json
