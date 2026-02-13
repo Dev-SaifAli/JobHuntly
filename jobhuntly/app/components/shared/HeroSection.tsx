@@ -1,6 +1,5 @@
 "use client";
 
-import React from "react";
 import SearchBar from "../../components/shared/SearchBar";
 import Navbar from "../layout/Navbar";
 
