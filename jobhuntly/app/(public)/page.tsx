@@ -1,6 +1,7 @@
 import HeroSection from "@/components/sections/hero-section";
 import TrustedBrands from "@/components/sections/trusted-brands";
 import { CategoryGrid } from "@/components/sections/category-grid";
+import { CTABanner } from "@/components/sections/cta-banner";
 
  export default function Home() {
   return (
@@ -11,6 +12,7 @@ import { CategoryGrid } from "@/components/sections/category-grid";
     <main>
     <TrustedBrands/>
     <CategoryGrid/>
+    <CTABanner/>
     </main>
     </>
   );

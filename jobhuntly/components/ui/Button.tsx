@@ -2,7 +2,7 @@ import React from "react";
 
 // 1. Interface ko theek se define kiya gaya hai
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: "primary" | "secondary" | "tertiary";
+  variant?: "primary" | "secondary" | "tertiary" | "white";
   size?: "sm" | "md" | "lg";
   icon?: React.ReactNode;
 }
@@ -14,15 +14,16 @@ export default function Button({
   icon, 
   className = "", 
   ...props 
-}: ButtonProps) { // 2. Yahan 'ButtonProps' add kiya gaya hai taaki TS error solve ho jaye
+}: ButtonProps) { 
   
   const baseStyles = "inline-flex items-center justify-center font-body font-bold transition-all active:scale-95 disabled:opacity-50 cursor-pointer";
   
   // Design System Colors mapping
   const variants = {
     primary: "bg-brand-primary text-white hover:brightness-110",
-    secondary: "border border-brand-primary text-brand-primary bg-transparent hover:bg-brand-primary/5",
+    secondary: "border border-brand-primary text-white bg-transparent hover:bg-brand-primary/5",
     tertiary: "text-brand-primary bg-transparent hover:bg-brand-primary/10",
+    white: "bg-white text-brand-primary hover:bg-white/95 shadow-xl hover:shadow-2xl",
   };
 
   const sizes = {
