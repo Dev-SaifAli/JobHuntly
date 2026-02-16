@@ -1,0 +1,1 @@
+export default function Page() { return <h1>Signup Coming Soon</h1>; }
