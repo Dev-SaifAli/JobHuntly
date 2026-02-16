@@ -75,10 +75,7 @@ const TrustedBrands = () => {
 
     return (
     <section className="w-full bg-[#F8F8FD] py-12 dark:bg-[#202430]">
-      {/* Matches Navbar container:
-         px-3 (mobile), px-6 (sm), lg:px-10, xl:px-24 
-         max-w-7xl + mx-auto
-      */}
+     
       <div className="mx-auto flex w-full max-w-7xl flex-col px-3 sm:px-6 lg:px-10 xl:px-24">
         
         {/* Header Text - Left Aligned to match Logo position above */}
@@ -88,20 +85,26 @@ const TrustedBrands = () => {
           </p>
         </div>
 
-        {/* Logo Grid - Flexible and responsive */}
-        <div className="flex flex-wrap items-center justify-between gap-y-8 text-zinc-400/60 dark:text-zinc-500/50">
-          {brands.map((brand) => (
-            <div 
-              key={brand.id} 
-              className="group flex items-center justify-center transition-all duration-500 hover:grayscale-0 grayscale transform hover:scale-105"
-            >
-              <span className="sr-only">{brand.name} logo</span>
-              <div className="flex items-center">
-                {brand.svg}
-              </div>
-            </div>
-          ))}
-        </div>
+      
+       <div
+  className="
+    flex flex-wrap items-center justify-center gap-6 sm:justify-between
+    text-zinc-400/60 dark:text-neutral-40
+  "
+>
+  {brands.map((brand) => (
+    <div
+      key={brand.id}
+      className="
+        group flex items-center justify-center transition-all duration-500
+        hover:grayscale-0 grayscale transform hover:scale-105
+      "
+    >
+      <span className="sr-only">{brand.name} logo</span>
+      <div className="flex items-center">{brand.svg}</div>
+    </div>
+  ))}
+</div>
       </div>
     </section>
   );

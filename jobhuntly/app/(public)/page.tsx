@@ -1,12 +1,17 @@
 import HeroSection from "@/components/sections/hero-section";
 import TrustedBrands from "@/components/sections/trusted-brands";
+import { CategoryGrid } from "@/components/sections/category-grid";
 
  export default function Home() {
   return (
-    <main>
+    <>
+    <header>
       <HeroSection />
-      <TrustedBrands/>
-      {/* You can add other sections here, like FeaturedJobs or Footer */}
+    </header>
+    <main>
+    <TrustedBrands/>
+    <CategoryGrid/>
     </main>
+    </>
   );
 }
