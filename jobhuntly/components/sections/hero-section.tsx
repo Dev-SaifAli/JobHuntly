@@ -1,7 +1,7 @@
 "use client";
 
-import SearchBar from "./SearchBar";
-import Navbar from "../layout/Navbar";
+import SearchBar from "../features/search/search-bar";
+import Navbar from "../layout/navbar";
 
 export default function HeroSection() {
   return (

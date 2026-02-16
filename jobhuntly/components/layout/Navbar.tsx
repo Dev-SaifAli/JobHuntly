@@ -2,8 +2,8 @@
 
 import React, { useState } from "react";
 import { Menu, X } from "lucide-react";
-import Button from "../ui/Button";
-import Logo from "@/components/ui/Logo" 
+import Button from "../ui/button";
+import Logo from "../ui/logo" 
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -50,7 +50,7 @@ export default function Navbar() {
         </div>
 
         <div className="hidden items-center gap-3 lg:flex xl:gap-4">
-          <Button variant="tertiary" className="text-zinc-900 dark:text-zinc-100">
+          <Button variant="tertiary">
             Login
           </Button>
 

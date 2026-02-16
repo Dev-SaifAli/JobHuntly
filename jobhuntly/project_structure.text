@@ -1,31 +1,42 @@
 - .gitignore
 - app
-  - company
+  - (auth)
+    - login
+    - signup
+  - (public)
+    - page.tsx
   - fonts
     - ClashDisplay-Variable.woff2
   - globals.css
-  - jobs
   - layout.tsx
-  - page.tsx
 - components
+  - features
+    - company
+    - job
+    - search
+      - search-bar.tsx
   - layout
-    - Footer.tsx
-    - Header.tsx
-    - Navbar.tsx
-  - shared
-    - HeroSection.tsx
-    - SearchBar.tsx
+    - navbar.tsx
+  - sections
+    - hero-section.tsx
   - ui
-    - Button.tsx
-    - Input.tsx
-    - Logo.tsx
-    - ThemeToggle.tsx
+    - button.tsx
+    - input.tsx
+    - logo.tsx
+    - theme-toggle.tsx
 - eslint.config.mjs
 - lib
+  - constants
+    - index.ts
+  - hooks
+    - use-theme.ts
   - tokens
     - colors.ts
     - spacing.ts
     - typography.ts
+  - types
+    - index.ts
+  - utils.ts
 - next-env.d.ts
 - next.config.ts
 - package-lock.json

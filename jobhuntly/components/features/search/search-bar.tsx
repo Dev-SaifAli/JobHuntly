@@ -2,8 +2,8 @@
 
 import React from "react";
 import { Search, MapPin, ChevronDown } from "lucide-react";
-import Input from "../ui/Input";
-import Button from "../ui/Button";
+import Input from "@/components/ui/input";
+import Button from "@/components/ui/button";
 
 const SearchBar = () => {
   return (
