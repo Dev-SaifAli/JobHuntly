@@ -6,7 +6,7 @@ import Navbar from "../layout/navbar";
 export default function HeroSection() {
   return (
     <div className="dark">
-      <div className="min-h-screen bg-[#F8F8FD] transition-colors duration-500 dark:bg-[#202430]">
+      <div className="min-h-screen bg-[#F8F8FD] transition-colors duration-500 dark:npm run build">
         <header className="border-b border-slate-200 dark:border-slate-800/50">
           <Navbar />
         </header>
