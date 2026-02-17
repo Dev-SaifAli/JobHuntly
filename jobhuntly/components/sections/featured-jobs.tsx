@@ -112,14 +112,14 @@ export function FeaturedJobs() {
       <div className="mx-auto max-w-7xl">
         {/* Header */}
         <div className="mb-10 flex items-center justify-between">
-          <h2 className="font-heading text-3xl text-neutral-100 dark:text-neutral-10 text-foreground md:text-4xl lg:text-5xl">
+          <h2 className="font-heading text-3xl text-neutral-100 dark:text-neutral-10 md:text-4xl lg:text-5xl">
             Featured{" "}
             <span className="text-accent-blue">jobs</span>
           </h2>
 
           
           <a  href="#"
-            className="group flex items-center gap-2 font-body text-sm font-medium text-primary transition-all hover:gap-3 md:text-base"
+            className="group flex items-center gap-2 font-body  text-brand-primary text-sm font-medium text-primary transition-all hover:gap-3 md:text-base"
           >
             Show all jobs
             <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />

@@ -24,7 +24,7 @@ export function CategoryCard({
     <button
       onClick={onClick}
       className={`
-        group relative w-full overflow-hidden border-neutral-20 transition-all duration-75 flex flex-col items-start
+        group relative w-full overflow-hidden border-[#D6DDEB] border-2 hover:border-brand-primary transition-all duration-75 flex flex-col items-start
         ${isSmall ? "p-4" : "p-6 md:p-8"}
         ${
           isActive

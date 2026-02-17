@@ -26,7 +26,7 @@ export function JobCard({ job, onClick }: JobCardProps) {
   return (
     <button
       onClick={onClick}
-      className="group w-full text-left bg-white border-2 border-[#D6DDEB] hover:border-brand-primary  p-6 transition-all duration-300 hover:shadow-lg flex flex-col gap-4"
+      className="group w-full text-left bg-neutral-0 border-2 border-[#D6DDEB] hover:border-brand-primary  p-6 transition-all duration-300 hover:shadow-lg flex flex-col gap-4"
     >
      {/* Header: Logo + Job Type Badge */}
       <div className="flex items-start justify-between w-full">

@@ -3,6 +3,7 @@ import TrustedBrands from "@/components/sections/trusted-brands";
 import { CategoryGrid } from "@/components/sections/category-grid";
 import { CTABanner } from "@/components/sections/cta-banner";
 import { FeaturedJobs } from "@/components/sections/featured-jobs";
+import { LatestJobs } from "@/components/sections/latest-jobs";
 
  export default function Home() {
   return (
@@ -15,6 +16,7 @@ import { FeaturedJobs } from "@/components/sections/featured-jobs";
     <CategoryGrid/>
     <CTABanner/>
     <FeaturedJobs />
+    <LatestJobs />
     </main>
     </>
   );
