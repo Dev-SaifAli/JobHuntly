@@ -1,5 +1,6 @@
 "use client"
 import { JobRow } from "@/components/features/job/job-row";
+import { CONTAINER } from "@/lib/constants";
 import { ArrowRight } from "lucide-react";
 
 const latestJobs = [
@@ -103,11 +104,11 @@ const latestJobs = [
 
 export function LatestJobs() {
   return (
-    <section className="py-16 px-4 bg-background sm:px-6 lg:px-10 xl:px-24 bg-[#F8F8FD] transition-colors duration-500 dark:bg-[#202430]">
-      <div className="mx-auto max-w-7xl">
+    <section className="py-16 bg-background  transition-colors duration-500 ">
+      <div className={CONTAINER}>
         {/* Header */}
         <div className="mb-10 flex items-center justify-between">
-          <h2 className="font-heading text-3xl  text-neutral-100 dark:text-neutral-10 md:text-4xl lg:text-5xl">
+          <h2 className="font-heading text-3xl text-foreground md:text-4xl lg:text-5xl">
             Latest{" "}
             <span className="text-accent-blue">jobs open</span>
           </h2>

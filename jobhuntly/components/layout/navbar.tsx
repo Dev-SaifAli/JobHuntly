@@ -4,10 +4,11 @@ import React, { useState } from "react";
 import { Menu, X } from "lucide-react";
 import Button from "../ui/button";
 import Logo from "../ui/logo" 
+import { CONTAINER } from "@/lib/constants";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const [activeTab, setActiveTab] = useState("Browse Companies");
+  const [activeTab, setActiveTab] = useState("");
 
   const navLinks = [
     { name: "Find Jobs", href: "#" },
@@ -15,12 +16,12 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="relative z-50 w-full border-b border-neutral-200 bg-[#F8F8FD] px-3 py-3 transition-colors sm:px-6 sm:py-4 lg:px-10 xl:px-24 dark:border-zinc-800 dark:bg-[#202430]">
-      <div className="mx-auto flex w-full max-w-7xl items-center justify-between gap-4">
+    <nav className="relative z-50 w-full border-b bg-background px-3 py-3 transition-colors sm:px-6 sm:py-4 lg:px-10 xl:px-24">
+      <div className={ `${CONTAINER} flex w-full  items-center justify-between gap-4`}>
         <div className="flex min-w-0 items-center gap-3 sm:gap-4 lg:gap-10">
           <div className="flex shrink-0 items-center gap-2">
             <Logo size={28} />
-            <span className="font-sans text-base font-bold tracking-tight text-zinc-900 sm:text-lg md:text-xl dark:text-white">
+            <span className="font-body text-base font-bold  tracking-tight text-foreground sm:text-lg md:text-xl ">
               JobHuntly
             </span>
           </div>
@@ -34,7 +35,7 @@ export default function Navbar() {
                   e.preventDefault();
                   setActiveTab(link.name);
                 }}
-                className={`relative flex h-full items-center px-3 font-sans text-sm font-medium transition-all xl:px-4 xl:text-base ${
+                className={`relative flex h-full items-center px-3 font-body text-sm font-medium transition-all xl:px-4 xl:text-base ${
                   activeTab === link.name
                     ? "text-[#4640DE] dark:text-blue-400"
                     : "text-zinc-500 hover:text-[#4640DE] dark:text-zinc-400 dark:hover:text-blue-400"
@@ -62,7 +63,7 @@ export default function Navbar() {
         </div>
 
         <button
-          className="rounded-sm p-2 text-zinc-900 lg:hidden dark:text-white"
+          className="rounded-sm p-2  lg:hidden text-foreground"
           onClick={() => setIsOpen((prev) => !prev)}
           aria-label="Toggle navigation menu"
         >

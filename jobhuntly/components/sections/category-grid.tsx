@@ -14,6 +14,7 @@ import {
   Users,
   ArrowRight 
 } from "lucide-react";
+import { CONTAINER } from "@/lib/constants";
 
 const categories = [
   { id: "design", icon: PencilRuler , title: "Design", jobCount: 235 },
@@ -36,11 +37,11 @@ export function CategoryGrid() {
   };
 
   return (
-    <section className="py-16 px-4 bg-[#F8F8FD] transition-colors duration-500 dark:bg-[#202430] sm:px-6 lg:px-10 xl:px-24">
-      <div className="mx-auto max-w-7xl">
+    <section className="py-16 px-4 bg-background transition-colors duration-500  sm:px-6 lg:px-10 xl:px-24">
+      <div className={CONTAINER}>
         {/* Header */}
         <div className="mb-10 flex items-center justify-between">
-          <h2 className="font-heading text-3xl font-bold text-neutral-100 dark:text-neutral-10 md:text-4xl lg:text-5xl">
+          <h2 className="font-heading text-3xl font-bold text-foreground md:text-4xl lg:text-5xl">
             Explore by{" "}
             <span className="text-accent-blue">category</span>
           </h2>

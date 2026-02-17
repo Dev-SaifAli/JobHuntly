@@ -35,7 +35,7 @@ export function JobRow({ job, onClick }: JobRowProps) {
 
       {/* Content */}
       <div className="flex flex-col gap-2 flex-1 min-w-0">
-        <h3 className="font-heading text-base md:text-lg font-bold text-foreground group-hover:text-primary transition-colors truncate">
+        <h3 className="font-heading text-base md:text-lg font-bold text-neutral-100 group-hover:text-primary transition-colors truncate">
           {job.title}
         </h3>
 

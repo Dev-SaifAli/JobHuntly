@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Epilogue} from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
+import Footer from "@/components/layout/footer";
 
 const epilogue = Epilogue({
   subsets: ["latin"],
@@ -43,6 +44,7 @@ export default function RootLayout({
     <html lang="en" className={`${epilogue.variable} ${clashDisplay.variable}`}>
       <body className="font-body antialiased">
         {children}
+        <Footer/>
       </body>
     </html>
   );
