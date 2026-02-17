@@ -23,7 +23,7 @@ export default function Input({
         <input
           className={`
             w-full outline-none bg-transparent font-body text-lg
-            text-neutral-100
+            text-foreground
             placeholder:text-neutral-40
             ${icon ? 'pl-12 pr-4' : 'px-4'}
             py-4

@@ -1,6 +1,7 @@
 "use client";
 
 import { JobCard } from "@/components/features/job/job-card";
+import { CONTAINER } from "@/lib/constants";
 import { ArrowRight } from "lucide-react";
 
 const featuredJobs = [
@@ -108,17 +109,18 @@ const featuredJobs = [
 
 export function FeaturedJobs() {
   return (
-    <section className="py-16 px-4 bg-background sm:px-6 lg:px-10 xl:px-24 bg-[#F8F8FD] transition-colors duration-500 dark:bg-[#202430]">
-      <div className="mx-auto max-w-7xl">
+    <section className="py-16 bg-background transition-colors duration-500">
+      <div className={CONTAINER}>
+
         {/* Header */}
         <div className="mb-10 flex items-center justify-between">
-          <h2 className="font-heading text-3xl text-neutral-100 dark:text-neutral-10 text-foreground md:text-4xl lg:text-5xl">
+          <h2 className="font-heading text-3xl text-foreground md:text-4xl lg:text-5xl">
             Featured{" "}
             <span className="text-accent-blue">jobs</span>
           </h2>
 
           
-          <a  href="#"
+            <a href="#"
             className="group flex items-center gap-2 font-body text-sm font-medium text-primary transition-all hover:gap-3 md:text-base"
           >
             Show all jobs
@@ -136,6 +138,7 @@ export function FeaturedJobs() {
             />
           ))}
         </div>
+
       </div>
     </section>
   );

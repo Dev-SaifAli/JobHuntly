@@ -74,7 +74,7 @@ const TrustedBrands = () => {
   ];
 
     return (
-    <section className="w-full bg-[#F8F8FD] py-12 dark:bg-[#202430]">
+    <section className="w-full bg-background py-12 dark:bg-[#202430]">
      
       <div className="mx-auto flex w-full max-w-7xl flex-col px-3 sm:px-6 lg:px-10 xl:px-24">
         

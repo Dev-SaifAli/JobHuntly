@@ -24,22 +24,20 @@ export function CategoryCard({
     <button
       onClick={onClick}
       className={`
-        group relative w-full overflow-hidden border-neutral-20 transition-all duration-75 flex flex-col items-start
-        ${isSmall ? "p-4" : "p-6 md:p-8"}
-        ${
-          isActive
-            ? "bg-brand-primary text-white shadow-lg"
-            : "bg-neutral-0 text-foreground"
-        }
+        group relative w-full border-[#D6DDEB] border-2 hover:border-brand-primary
+        transition-all duration-50 flex flex-col justify-between items-start
+        ${isSmall ? "pt-4 pb-2 px-4" : "pt-6 pb-4 px-6 md:pt-8 md:pb-6 md:px-8"}
+
+        ${isActive ? "bg-brand-primary  shadow-lg" : "bg-neutral-0 text-neutral-100"}
       `}
     >
       {/* Icon */}
-      <div className="mb-8 inline-flex">
+      <div className="mb-4 inline-flex">
         <Icon
           className={`
             transition-transform duration-300 group-hover:translate-x-2 group-hover:scale-110
             ${isSmall ? "h-8 w-8" : "h-10 w-10 md:h-12 md:w-12"}
-            ${isActive ? "text-neutral-0" : " text-brand-primary"}
+            ${isActive ? "text-white" : "text-brand-primary"}
           `}
           strokeWidth={1.4}
         />
@@ -48,7 +46,7 @@ export function CategoryCard({
       {/* Title */}
       <h3
         className={`
-          font-heading font-semibold mb-3
+          font-heading font-semibold mb-2
           ${isSmall ? "text-lg" : "text-xl md:text-2xl"}
           group-hover:translate-x-1 transition-all duration-300
         `}
@@ -62,8 +60,8 @@ export function CategoryCard({
           className={`
             font-body
             ${isSmall ? "text-sm" : "text-base"}
-            ${isActive ? "text-neutral-0" : "text-neutral-60"}
-          ` }
+            ${isActive ? "text-white" : "text-neutral-60"}
+          `}
         >
           {jobCount} jobs available
         </span>
@@ -73,8 +71,8 @@ export function CategoryCard({
             transition-all duration-300
             ${isSmall ? "h-4 w-4" : "h-5 w-5"}
             ${isActive
-              ? "translate-x-0 opacity-100"
-              : "opacity-0 -translate-x-2 group-hover:translate-x-0 group-hover:opacity-100"}
+              ? "translate-x-0 opacity-100 text-white"
+              : "opacity-0 -translate-x-2 group-hover:translate-x-0 group-hover:opacity-100 text-brand-primary"}
           `}
         />
       </div>
