@@ -7,7 +7,7 @@ import Button from "@/components/ui/button";
 export function JobSearchBar() {
   return (
     <div className="bg-white shadow-lg p-2 md:p-4">
-      <div className="flex flex-col md:flex-row gap-4">
+      <div className="flex flex-col  md:flex-row gap-4">
         
         {/* Job Title Input */}
             <div className="flex items-center gap-3 flex-1 px-4 py-3 border-b md:border-b-0 border-neutral-20">

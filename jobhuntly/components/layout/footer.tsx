@@ -34,7 +34,7 @@ export default function Footer() {
   const [email, setEmail] = useState("");
 
   return (
-    <footer className="bg-background text-white">
+    <footer className="bg-[#202430] text-white">
      
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-10 xl:px-24 py-16">
         <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-4">
