@@ -34,7 +34,7 @@ export default function Footer() {
   const [email, setEmail] = useState("");
 
   return (
-    <footer className="bg-background text-white">
+    <footer className="bg-[#202430] text-white">
      
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-10 xl:px-24 py-16">
         <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-4">
@@ -99,18 +99,18 @@ export default function Footer() {
   <p className="font-body text-sm leading-relaxed text-white/60">
     The latest job news, articles, sent to your inbox weekly.
   </p>
-  <div className="flex border-2 border-white overflow-hidden">
+  <div className="flex flex-col border-2 border-white overflow-hidden">
     <Input
       placeholder="Email Address"
       type="email"
       value={email}
       onChange={(e) => setEmail(e.target.value)}
-      className="flex-1 w-0 min-w-0 h-12 rounded-none border-0 bg-transparent text-white text-sm placeholder:text-white/40 focus-visible:ring-0 focus-visible:ring-offset-0"
+      className=""
     />
     <Button
       variant="primary"
       size="sm"
-      className="rounded-none shrink-0 h-12 px-5 text-sm"
+      className=""
     >
       Subscribe
     </Button>

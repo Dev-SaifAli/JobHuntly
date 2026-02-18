@@ -15,16 +15,16 @@ export default function Input({
     <div className="w-full">
       <div className="relative flex items-center">
         {icon && (
-          <div className="absolute left-4 text-neutral-60 pointer-events-none">
+          <div className="absolute left-4 text-neutral-100 pointer-events-none">
             {icon}
           </div>
         )}
         
         <input
           className={`
-            w-full outline-none bg-transparent font-body text-lg
-            text-foreground
-            placeholder:text-neutral-40
+            w-full outline-none bg-transparent font-body text-lg 
+            text-neutral-20  border-b border-neutral-20
+            placeholder:text-neutral-20
             ${icon ? 'pl-12 pr-4' : 'px-4'}
             py-4
             ${className}

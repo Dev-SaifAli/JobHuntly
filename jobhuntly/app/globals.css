@@ -7,6 +7,7 @@
   /* Fonts */
   --font-heading: var(--font-clash);
   --font-body: var(--font-epilogue);
+  --font-nav: var(----font-redHatDisplay);
 
   /* Brand Colors */
   --color-brand-primary: #4640DE;
@@ -144,6 +145,7 @@
 @layer utilities {
   .font-heading { font-family: var(--font-heading), serif; }
   .font-body { font-family: var(--font-body), sans-serif; }
+  .font-nav{font-family: var(--font-nav), sans-serif;}
 
   .bg-brand-primary { background-color: var(--color-brand-primary); }
   .text-brand-primary { color: var(--color-brand-primary); }

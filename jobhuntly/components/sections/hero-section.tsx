@@ -1,18 +1,14 @@
 "use client";
 
 import { CONTAINER } from "@/lib/constants";
-import SearchBar from "../features/search/search-bar";
-import Navbar from "../layout/navbar";
+import LandingSearchBar from "../features/search/landing-search-bar";
 
 export default function HeroSection() {
   return (
    
-      <div className="min-h-screen bg-background transition-colors duration-500 ">
-        <header >
-          <Navbar />
-        </header>
+      <div className={`${CONTAINER} min-h-screen bg-background transition-colors duration-500 ` } >
 
-        <main className={`${CONTAINER} overflow-x-hidden pt-8 pb-8 sm:pt-10 sm:pb-10 md:pt-14 md:pb-14 lg:pt-20 lg:pb-20`}>
+        <main className={`overflow-x-hidden pt-8 pb-8 sm:pt-10 sm:pb-10 md:pt-14 md:pb-14 lg:pt-20 lg:pb-20`}>
           <div className="max-w-4xl
       space-y-6 sm:space-y-8 md:space-y-10">
             <h1 className="font-heading mb-4 text-[2rem] leading-[1.05] tracking-normal  transition-colors duration-300 sm:mb-6 sm:text-5xl md:mb-8 md:text-[64px] lg:text-[72px]">
@@ -42,15 +38,22 @@ export default function HeroSection() {
             </p>
 
             <div className="mb-2 sm:mb-4">
-              <SearchBar />
+              <LandingSearchBar />
             </div>
 
             <div className="flex flex-wrap items-center gap-x-1 gap-y-2 font-body text-sm text-slate-500 transition-colors duration-300 md:text-base dark:text-slate-400">
-              <span className="mr-2  text-foreground">Popular :</span>
-              <span className="cursor-pointer hover:text-[#4640DE]">UI Designer</span>,
-              <span className="ml-1 cursor-pointer hover:text-[#4640DE]">UX Researcher</span>,
-              <span className="ml-1 cursor-pointer hover:text-[#4640DE]">Android</span>,
-              <span className="ml-1 cursor-pointer hover:text-[#4640DE]">Admin</span>
+             <p className="font-body text-sm text-neutral-60">
+                <span className="font-medium">Popular :</span>{" "}
+                <span className="space-x-2">
+                  <a href="#" className="hover:text-primary transition-colors">UI Designer</a>
+                  <span>,</span>
+                  <a href="#" className="hover:text-primary transition-colors">UX Researcher</a>
+                  <span>,</span>
+                  <a href="#" className="hover:text-primary transition-colors">Android</a>
+                  <span>,</span>
+                  <a href="#" className="hover:text-primary transition-colors">Admin</a>
+                </span>
+              </p>
             </div>
           </div>
         </main>
