@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import { Epilogue} from "next/font/google";
 import localFont from "next/font/local";
+import { Red_Hat_Display } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/layout/footer";
+import Navbar from "@/components/layout/navbar";
 
 const epilogue = Epilogue({
   subsets: ["latin"],
@@ -10,7 +12,11 @@ const epilogue = Epilogue({
   variable: "--font-epilogue",
 });
 
-
+const redHatDisplay = Red_Hat_Display({
+   subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"], // Light, Regular, Medium, Semibold, Bold
+  variable: "--font-redHatDisplay",
+})
 const clashDisplay = localFont({
   src: [
     {
@@ -41,8 +47,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${epilogue.variable} ${clashDisplay.variable}`}>
+    <html lang="en" className={`${epilogue.variable} ${clashDisplay.variable} ${redHatDisplay.variable}`}>
       <body className="font-body antialiased">
+        <Navbar/>
         {children}
         <Footer/>
       </body>

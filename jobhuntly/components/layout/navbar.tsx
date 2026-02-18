@@ -1,99 +1,102 @@
 "use client";
 
-import React, { useState } from "react";
+import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import Button from "../ui/button";
-import Logo from "../ui/logo" 
+import Logo from "../ui/logo";
+import { usePathname } from "next/navigation";
+import Link from "next/link";
 import { CONTAINER } from "@/lib/constants";
 
 export default function Navbar() {
+  const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
-  const [activeTab, setActiveTab] = useState("");
 
   const navLinks = [
-    { name: "Find Jobs", href: "#" },
-    { name: "Browse Companies", href: "#" },
+    { name: "Find Jobs", href: "/jobs" },
+    { name: "Browse Companies", href: "/companies" },
   ];
 
   return (
-    <nav className="relative z-50 w-full border-b bg-background px-3 py-3 transition-colors sm:px-6 sm:py-4 lg:px-10 xl:px-24">
-      <div className={ `${CONTAINER} flex w-full  items-center justify-between gap-4`}>
-        <div className="flex min-w-0 items-center gap-3 sm:gap-4 lg:gap-10">
-          <div className="flex shrink-0 items-center gap-2">
-            <Logo size={28} />
-            <span className="font-body text-base font-bold  tracking-tight text-foreground sm:text-lg md:text-xl ">
-              JobHuntly
-            </span>
+    <nav className="relative z-50 w-full border-b border-border bg-background transition-colors">
+      <div className={CONTAINER}>
+        <div className="flex w-full items-center justify-between gap-4 py-3">
+          {/* Logo Section */}
+          <div className="flex min-w-0 items-center gap-3 sm:gap-4 lg:gap-10">
+            <Link href="/" className="flex shrink-0 items-center gap-2">
+              <Logo size={28} />
+              <span className="font-nav text-base font-medium tracking-tight text-foreground sm:text-lg md:text-xl">
+                JobHuntly
+              </span>
+            </Link>
+
+            {/* Desktop Nav Links */}
+            <div className="hidden items-center self-stretch lg:flex lg:h-14">
+              {navLinks.map((link) => {
+                const isActive = pathname === link.href;
+                return (
+                  <Link
+                    key={link.name}
+                    href={link.href}
+                    className={`relative flex h-full items-center px-3 font-body text-sm font-medium transition-all xl:px-4 xl:text-base ${
+                      isActive
+                        ? "text-primary"
+                        : "text-neutral-60 hover:text-primary"
+                    }`}
+                  >
+                    {link.name}
+                    {isActive && (
+                      <div className="absolute bottom-0 left-0 h-[3px] w-full rounded-t-sm bg-primary" />
+                    )}
+                  </Link>
+                );
+              })}
+            </div>
           </div>
 
-          <div className="hidden items-center self-stretch lg:flex lg:h-14">
-            {navLinks.map((link) => (
-              <a
-                key={link.name}
-                href={link.href}
-                onClick={(e) => {
-                  e.preventDefault();
-                  setActiveTab(link.name);
-                }}
-                className={`relative flex h-full items-center px-3 font-body text-sm font-medium transition-all xl:px-4 xl:text-base ${
-                  activeTab === link.name
-                    ? "text-[#4640DE] dark:text-blue-400"
-                    : "text-zinc-500 hover:text-[#4640DE] dark:text-zinc-400 dark:hover:text-blue-400"
-                }`}
-              >
-                {link.name}
-                {activeTab === link.name && (
-                  <div className="absolute bottom-[-17px] left-0 h-[3px] w-full rounded-t-sm bg-[#4640DE] dark:bg-blue-500" />
-                )}
-              </a>
-            ))}
+          {/* Desktop Auth Buttons */}
+          <div className="hidden items-center gap-3 lg:flex xl:gap-4">
+            <Button variant="tertiary">Login</Button>
+            <div className="mx-1 h-8 w-px bg-border" />
+            <Button variant="primary">Sign Up</Button>
           </div>
+
+          {/* Mobile Menu Toggle */}
+          <button
+            className="rounded-sm p-2 text-foreground lg:hidden"
+            onClick={() => setIsOpen((prev) => !prev)}
+            aria-label="Toggle navigation menu"
+          >
+            {isOpen ? <X size={26} /> : <Menu size={26} />}
+          </button>
         </div>
-
-        <div className="hidden items-center gap-3 lg:flex xl:gap-4">
-          <Button variant="tertiary">
-            Login
-          </Button>
-
-          <div className="mx-1 h-8 w-px bg-zinc-200 dark:bg-zinc-800" />
-
-          <Button variant="primary" className="rounded-none px-6 xl:px-8">
-            Sign Up
-          </Button>
-        </div>
-
-        <button
-          className="rounded-sm p-2  lg:hidden text-foreground"
-          onClick={() => setIsOpen((prev) => !prev)}
-          aria-label="Toggle navigation menu"
-        >
-          {isOpen ? <X size={26} /> : <Menu size={26} />}
-        </button>
       </div>
 
+      {/* Mobile Menu */}
       {isOpen && (
-        <div className="absolute left-0 top-full w-full border-b border-zinc-200 bg-[#F8F8FD] p-5 shadow-2xl md:p-6 lg:hidden dark:border-zinc-800 dark:bg-[#202430]">
+        <div className="absolute left-0 top-full w-full border-b border-border bg-background p-5 shadow-2xl md:p-6 lg:hidden">
           <div className="mx-auto flex w-full max-w-7xl flex-col gap-4">
-            {navLinks.map((link) => (
-              <a
-                key={link.name}
-                href={link.href}
-                className={`text-base font-medium ${activeTab === link.name ? "text-[#4640DE]" : "text-zinc-600 dark:text-zinc-300"}`}
-                onClick={(e) => {
-                  e.preventDefault();
-                  setActiveTab(link.name);
-                  setIsOpen(false);
-                }}
-              >
-                {link.name}
-              </a>
-            ))}
-            <hr className="my-1 border-zinc-200 dark:border-zinc-800" />
+            {navLinks.map((link) => {
+              const isActive = pathname === link.href;
+              return (
+                <Link
+                  key={link.name}
+                  href={link.href}
+                  className={`text-base font-medium ${
+                    isActive ? "text-primary" : "text-neutral-60"
+                  }`}
+                  onClick={() => setIsOpen(false)}
+                >
+                  {link.name}
+                </Link>
+              );
+            })}
+            <hr className="my-1 border-border" />
             <div className="flex flex-col gap-3 sm:flex-row sm:gap-4">
               <Button variant="tertiary" className="justify-center sm:justify-start">
                 Login
               </Button>
-              <Button variant="primary" className="w-full rounded-none sm:w-auto">
+              <Button variant="primary" className="w-full sm:w-auto">
                 Sign Up
               </Button>
             </div>
