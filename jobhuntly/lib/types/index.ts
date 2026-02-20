@@ -27,3 +27,15 @@ export interface FilterGroup {
   key: "type" | "categories" | "level" | "salary";
   options: FilterOption[];
 }
+
+export interface Company {
+  id: string;
+  name: string;
+  logo: string;
+  description: string;
+  jobCount: number;
+  tags: {
+    label: string;
+    color: "yellow" | "green" | "red" | "purple" | "blue";
+  }[];
+}

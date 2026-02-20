@@ -3,7 +3,7 @@
 import { Search, MapPin, ChevronDown } from "lucide-react";
 import Button from "@/components/ui/button";
 
-export function JobSearchBar() {
+export function CompaniesSearchBar() {
   return (
     <div className="bg-white shadow-lg p-2 md:p-4">
       <div className="flex flex-col  md:flex-row gap-4">
@@ -13,7 +13,7 @@ export function JobSearchBar() {
               <Search className="w-6 h-6 text-neutral-100 shrink-0" />
               <input
                 type="text"
-                placeholder="Job title or keyword"
+                placeholder="Company name or keyword"
          className="
             flex-1 pb-0.5 font-body text-base text-neutral-100 placeholder:text-neutral-60 bg-transparent
             border-b-2 border-neutral-60 transition-all duration-75
