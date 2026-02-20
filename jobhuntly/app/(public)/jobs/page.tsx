@@ -2,6 +2,7 @@
 import { CONTAINER } from "@/lib/constants";
 import { JobSearchBar } from "@/components/features/search/job-search-bar";
 import { motion } from "framer-motion";
+import { AllJobsSection } from "@/components/features/job/job-section";
 
 const container = {
   hidden: { opacity: 0 },
@@ -18,8 +19,8 @@ const item = {
 
 export default function JobsPage() {
   return (
-    <main>
-      <section className="bg-background py-12 md:py-16 lg:py-20">
+    <>
+      <header className="bg-secondary py-12 md:py-16 lg:py-20">
         <div className={CONTAINER}>
           <motion.div
             className="space-y-8"
@@ -94,7 +95,11 @@ export default function JobsPage() {
             </motion.div>
           </motion.div>
         </div>
-      </section>
-    </main>
+      </header>
+
+      <main>
+        <AllJobsSection/>
+      </main>
+    </>
   );
 }

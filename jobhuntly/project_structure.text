@@ -1,0 +1,87 @@
+- .gitignore
+- app
+  - (auth)
+    - login
+      - page.tsx
+    - signup
+      - page.tsx
+  - (public)
+    - jobs
+      - page.tsx
+    - page.tsx
+  - fonts
+    - ClashDisplay-Variable.woff2
+  - globals.css
+  - layout.tsx
+- components
+  - features
+    - company
+    - job
+      - category-card.tsx
+      - job-card.tsx
+      - job-row.tsx
+      - job-section.tsx
+      - mobile-filter-drawer.tsx
+    - search
+      - job-search-bar.tsx
+      - landing-search-bar.tsx
+  - layout
+    - footer.tsx
+    - navbar.tsx
+  - sections
+    - category-grid.tsx
+    - cta-banner.tsx
+    - featured-jobs.tsx
+    - hero-section.tsx
+    - latest-jobs.tsx
+    - trusted-brands.tsx
+  - ui
+    - badge.tsx
+    - button.tsx
+    - input.tsx
+    - logo.tsx
+    - theme-toggle.tsx
+- eslint.config.mjs
+- lib
+  - constants
+    - index.ts
+  - hooks
+    - use-theme.ts
+  - tokens
+    - colors.ts
+    - spacing.ts
+    - typography.ts
+  - types
+    - index.ts
+  - utils.ts
+- next-env.d.ts
+- next.config.ts
+- package-lock.json
+- package.json
+- postcss.config.mjs
+- public
+  - dashboard-preview.svg
+  - favicon.svg
+  - file.svg
+  - globe.svg
+  - logos
+    - blinklist.svg
+    - canva.svg
+    - classpass.svg
+    - dropbox.svg
+    - godaddy.svg
+    - maze.svg
+    - netlify.svg
+    - nomad.svg
+    - packer.svg
+    - pitch.svg
+    - revolut.svg
+    - terraform.svg
+    - twitter.svg
+    - udacity.svg
+    - webflow.svg
+  - next.svg
+  - vercel.svg
+  - window.svg
+- README.md
+- tsconfig.json
